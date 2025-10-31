@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Halaman Beranda</h2>
+
+<form method="get" action="{{ url_for('index') }}">
+  <label>Nama kota:
+    <input type="text" name="city" value="{{ city }}">
+  </label>
+  <button type="submit">Tampilkan</button>
+</form>
+
+<p>Hari ini: {{ weekday }}</p>
+
+{% if weather_table %}
+  <h3>Perkiraan cuaca 3 hari</h3>
+  <table class="weather-table">
+    <tr><th>Tanggal</th><th>Suhu rata-rata (°C)</th><th>Deskripsi</th></tr>
+    {% for row in weather_table %}
+      <tr><td>{{ row.date }}</td><td>{{ row.avg_temp }}</td><td>{{ row.desc }}</td></tr>
+    {% endfor %}
+  </table>
+{% else %}
+  <p>Tidak ada data cuaca. Set OPENWEATHER_API_KEY untuk melihat data nyata.</p>
+{% endif %}
+{% endblock %}

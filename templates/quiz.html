@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Kuis (Topik: Pengembangan Kecerdasan Buatan)</h2>
+
+<article class="question">
+  <form method="post">
+    <input type="hidden" name="question_id" value="{{ question['id'] }}">
+    <p><strong>{{ question['question'] }}</strong></p>
+
+    {% for orig_idx, choice in indexed_choices %}
+      <div>
+        <!-- value di-set ke original index (orig_idx) sehingga server dapat memeriksa dengan benar -->
+        <label><input type="radio" name="choice" value="{{ orig_idx }}" required> {{ choice }}</label>
+      </div>
+    {% endfor %}
+
+    <button type="submit">Kirim Jawaban</button>
+  </form>
+</article>
+
+<p><a href="{{ url_for('leaderboard') }}">Lihat papan peringkat</a></p>
+{% endblock %}
+

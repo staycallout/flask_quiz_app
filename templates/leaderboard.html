@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Papan Peringkat</h2>
+<table>
+  <tr><th>Nama</th><th>Skor Total</th></tr>
+  {% for r in rows %}
+  <tr><td>{{ r['display_name'] }}</td><td>{{ r['total_score'] }}</td></tr>
+  {% endfor %}
+</table>
+{% endblock %}

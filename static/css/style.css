@@ -1,0 +1,13 @@
+
+body{font-family: Arial, sans-serif; margin:0; padding:0; background:#f7f7f7;}
+.container{max-width:900px;margin:20px auto;padding:20px;background:white;border-radius:8px;}
+.site-header{background:white;padding:12px 0;border-bottom:1px solid #eee;}
+.site-header h1{display:inline-block;margin:0 12px;}
+.site-header nav{display:inline-block;}
+.site-footer{margin-top:20px;padding:12px;text-align:center;color:#666;font-size:14px;}
+.flashes{list-style:none;padding:0;}
+.flash{padding:8px;margin:8px 0;border-radius:4px;}
+.flash.success{background:#e6ffed;border:1px solid #b2f2c4;}
+.flash.danger{background:#ffe6e6;border:1px solid #f2b2b2;}
+.weather-table{width:100%;border-collapse:collapse;}
+.weather-table th, .weather-table td{border:1px solid #ddd;padding:8px;}
