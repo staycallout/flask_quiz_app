@@ -92,7 +92,7 @@ def index():
         except Exception as e:
             weather_table = None
     else:
-        # No API key set; show placeholder sample data
+        
         weather_table = [
             {"date": datetime.now().strftime("%Y-%m-%d"), "avg_temp": 29.0, "desc": "cerah"},
             {"date": (datetime.now()).strftime("%Y-%m-%d"), "avg_temp": 30.0, "desc": "berawan"},
