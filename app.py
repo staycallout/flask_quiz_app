@@ -8,8 +8,8 @@ from datetime import datetime
 
 # Configuration
 DATABASE = os.path.join(os.path.abspath(os.path.dirname(__file__)), "data.db")
-SECRET_KEY = os.environ.get("FLASK_SECRET_KEY", "change_this_secret_in_production")
-OPENWEATHER_API_KEY = os.environ.get("OPENWEATHER_API_KEY", "")  # set this in environment
+SECRET_KEY = os.environ.get("Cuaca_Kota", "change_this_secret_in_production")
+OPENWEATHER_API_KEY = os.environ.get("c5c1e9abb0ddb14be165b4381efc9b2b", "")  # set this in environment
 
 app = Flask(__name__)
 app.config.from_object(__name__)
